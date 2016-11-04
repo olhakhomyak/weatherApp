@@ -1,30 +1,37 @@
-$('#search-btn').click(function () {
-    var city = $('#srch-term').val();
-    $('#srch-term').val("");
-    var weather = new XMLHttpRequest();
-    weather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&APPID=bfc3222c7b3b0ed16b937cb274438ce2", false);
-    weather.send(null);
+$(document).ready(function () {
 
-    // GET DATA
-    var current = JSON.parse(weather.response);
-    var temp = current.main.temp;
-    var country = current.sys.country;
-    var description = current.weather[0].description;
+    $('#search-btn').click(function () {
+        // GET CITY NAME
+        var city = $('#srch-term').val();
+        $('#srch-term').val("");
 
-    // HOW MANY CITIES CAN CONTAIN
-    if($(".city-item").length > 4) {
-        $('div').remove('.city-item');
-    }
+        // GET DATA
+        var weather = new XMLHttpRequest();
+        weather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&APPID=bfc3222c7b3b0ed16b937cb274438ce2", false);
+        weather.send(null);
+        var current = JSON.parse(weather.response);
+        var temp = current.main.temp;
+        var country = current.sys.country;
+        var description = current.weather[0].description;
 
+        // HOW MANY CITIES CAN CONTAIN
+        // change length to add or remove number of the cities per page
+        if($(".city-item").length > 4) {
+            $('div').remove('.city-item');
+        }
 
-    $('#show-weather').fadeIn(3000)
-                      .append("<div class='city-item'>"
-                                + city + ", " + country + ", " + temp + "°C, " + description +
-                              "</div>");
-    $('#clear-btn').fadeIn(3000);
-});
+        // SHOW WEATHER BLOCK
+        $('#show-weather').fadeIn(3000)
+                          .append("<div class='city-item'>"
+                                    + city + ", " + country + ", " + temp + "°C, " + description +
+                                  "</div>");
+        $('#clear-btn').fadeIn(3000);
+    });
 
-$('#clear-btn').click(function () {
-    $('#show-weather').fadeOut(1000);
-    $('#clear-btn').fadeOut(1000);
+    //REMOVE WEATHER BLOCK
+    $('#clear-btn').click(function () {
+        $('#show-weather').fadeOut(1000);
+        $('#clear-btn').fadeOut(1000);
+    });
+
 });

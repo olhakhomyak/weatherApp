@@ -1,102 +1,69 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
+/**************
+GENERAL STYLES
+**************/
 body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+    background-color: #1A86C8;
+    background-image: url("../img/bg-clouds.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100vh;
 }
 
+h1 {
+    font-size: 36px;
+    margin-top: 50px;
+}
 
+.form-control {  color: white;  }
+
+.navbar-form {  display: inline-block;  }
 
 .center-content { text-align: center; }
 
-body {
-    background-image: url("../img/bg-clouds.png");
-    background-size: 100% 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-color: #1A86C8;
-    color: white;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
+/***************
+WEATHER BLOCK
+****************/
 #show-weather {
-    display: none;
-    text-align: center;
     color: #1A86C8;
+    display: none;
     max-height: 320px;
+    text-align: center;
 }
 
 #show-weather img {
+    display: inline-block;
+    margin-top: 20px;
+    height: 300px;
     width: 600px;
     max-width: 100%;
-    height: 300px;
-    margin-top: 20px;
-    display: inline-block;
 }
 
 #show-weather > div {
+    margin-bottom: 10px;
     position: relative;
     top: -170px;
-    margin-bottom: 10px;
 }
 
+/*********
+BUTTONS
+*********/
 #clear-btn {
-    font-size: 17px;
-    color: darkred;
-    border:none;
     background-color: transparent;
-    position: relative;
-    left: 48%;
-    top: -250px;
+    border:none;
+    color: darkred;
     display: none;
+    font-size: 17px;
+    left: 48%;
+    position: relative;
+    top: -250px;
 }
 
 #clear-btn span {
-    vertical-align: middle;
-    font-size: 13px;
     margin-bottom: 3px;
+    font-size: 13px;
+    vertical-align: middle;
 }
 
 label {
@@ -104,42 +71,27 @@ label {
     margin: 0;
 }
 
-label:hover {
-    cursor: pointer;
-}
-
-.form-control {
-    color: white;
-}
-
-.navbar-form {
-    display: inline-block;
-}
+label:hover {  cursor: pointer;  }
 
 #srch-term,
 #search-btn {
-    border-radius: 0;
     background-color: transparent;
+    border-radius: 0;
     border: 2px solid white;
     box-sizing: border-box;
 }
 
 #search-btn {
     background-color: white;
-    padding: 5px 12px;
     color: #1A86C8;
+    padding: 5px 12px;
 }
 
 #search-btn:hover,
 #search-btn:active,
 #search-btn:active:focus {
+    box-shadow: none;
     color: #1A86C8;
     cursor: pointer;
     outline: none;
-    box-shadow: none;
-}
-
-h1 {
-    font-size: 36px;
-    margin-top: 50px;
 }
