@@ -1,3 +1,6 @@
+/************************
+GENERAL STYLES && MEDIA
+************************/
 .center-content { text-align: center; }
 
 body {
@@ -12,45 +15,6 @@ h1 {
     margin-bottom: 50px;
 }
 
-#input-city {
-    display: inline-block;
-}
-.navbar-form .input-group .input-group-btn {
-    width: 70px;
-}
-
-#show-weather {
-    display: none;
-    margin-top: 20px;
-}
-
-#show-weather > div {
-    margin-left: 10px;
-}
-
-#show-weather > div:last-child {
-    margin-bottom: 80px;
-}
-
-
-#srch-term {
-    min-width: 550px;
-    background-color: transparent;
-    border-radius: 0;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    height: 50px;
-    font-size: 18px;
-}
-
-.city-item {
-    font-size: 18px;
-}
-
-.city-name {
-    font-size: 24px;
-}
-
 @media (max-width: 768px) {
     #srch-term {
         min-width: 280px;
@@ -61,9 +25,12 @@ h1 {
     }
 }
 
-#search-btn > label {
-    font-weight: 400;
-}
+/********
+BUTTONS
+*********/
+.navbar-form .input-group .input-group-btn {  width: 70px;  }
+
+#search-btn > label {  font-weight: 400;  }
 
 #search-btn,
 #clear-btn {
@@ -90,9 +57,7 @@ h1 {
     vertical-align: middle;
 }
 
-#search-btn {
-    width: 75px;
-}
+#search-btn {  width: 75px;  }
 
 #search-btn:hover,
 #search-btn:active,
@@ -104,9 +69,7 @@ h1 {
     background-color: #ffffff;
 }
 
-#search-btn:hover {
-    background-color: #f7f7f7;
-}
+#search-btn:hover {  background-color: #f7f7f7;  }
 
 label {
     padding: 0;
@@ -114,4 +77,38 @@ label {
 }
 
 label:hover {  cursor: pointer;  }
+
+
+
+/**************
+DISPLAY BLOCK
+**************/
+/******
+search
+******/
+#input-city {  display: inline-block;  }
+
+#srch-term {
+    min-width: 550px;
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    height: 50px;
+    font-size: 18px;
+}
+
+/********
+display
+*********/
+#show-weather {
+    display: none;
+    margin-top: 20px;
+}
+
+#show-weather > div {  margin-left: 10px;  }
+#show-weather > div:last-child {  margin-bottom: 80px;  }
+
+.city-item {  font-size: 18px;  }
+.city-name {  font-size: 24px;  }
 
