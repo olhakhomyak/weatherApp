@@ -22,8 +22,8 @@ $(document).ready(function () {
 
         // SHOW WEATHER BLOCK
         $('#show-weather').fadeIn(3000)
-                          .append("<div class='city-item'>"
-                                    + city + ", " + country + ", " + temp + "°C, " + description +
+                          .append("<div class='city-item'>- "
+                                    + "<span class='city-name'>" + city + "</span>, " + country + ", " + temp + "°C, " + description +
                                   "</div>");
         $('#clear-btn').fadeIn(3000);
     });
